@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Senior Developer",
+    company: "NTT DATA Spain",
+    description:
+      "Análisis funcional y técnico y desarrollo Full Stack en aplicaciones empresariales. Especializado en optimización y administración de bases de datos Oracle y PostgreSQL. Participación en proyectos de migración tecnológica a Angular de aplicaciones. Experiencia en automatización, control de versiones con Git y Bitbucket y despliegue continuo mediante Bamboo, mejorando la eficiencia operativa.Además, cuenta con experiencia en gestión de equipos y relación directa con el cliente, coordinando desarrollos, recogiendo requisitos y resolviendo incidencias para garantizar la calidad y continuidad de los servicios.",
+    // link: "",
+  },
+  // {
+  //   date: "Septiembre 2022",
+  //   title: "Principal Frontend Engineer",
+  //   company: "Adevinta Spain",
+  //   description:
+  //     "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+  // },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
