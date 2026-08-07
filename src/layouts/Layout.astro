@@ -12,7 +12,9 @@ interface Props {
 }
 
 const { description, title } = Astro.props
-const faviconUrl = `${import.meta.env.BASE_URL}favicon.svg`
+const rawBaseUrl = import.meta.env.BASE_URL
+const baseUrl = rawBaseUrl.endsWith("/") ? rawBaseUrl : `${rawBaseUrl}/`
+const faviconUrl = `${baseUrl}favicon.svg`
 ---
 
 <!doctype html>

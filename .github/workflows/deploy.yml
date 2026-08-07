@@ -37,7 +37,10 @@ jobs:
       - name: Verify Pages artifact
         run: |
           test -f dist/index.html
+          test -f dist/jzamudio.png
           test -f dist/cv/CV_Jesus_Zamudio_Noguera.pdf
+          grep -q '/portafolio/jzamudio.png' dist/index.html
+          grep -q '/portafolio/cv/CV_Jesus_Zamudio_Noguera.pdf' dist/index.html
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6

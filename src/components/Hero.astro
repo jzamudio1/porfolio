@@ -1,6 +1,7 @@
 ---
 const personalImageAlt = "Jesús Zamudio Noguera"
-const baseUrl = import.meta.env.BASE_URL
+const rawBaseUrl = import.meta.env.BASE_URL
+const baseUrl = rawBaseUrl.endsWith("/") ? rawBaseUrl : `${rawBaseUrl}/`
 const profileImageUrl = `${baseUrl}jzamudio.png`
 const cvUrl = `${baseUrl}cv/CV_Jesus_Zamudio_Noguera.pdf`
 
