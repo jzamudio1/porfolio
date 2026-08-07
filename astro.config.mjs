@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite"
 
 export default defineConfig({
   site: "https://jzamudio1.github.io",
-  base: "/porfolio",
+  base: "/portafolio",
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
