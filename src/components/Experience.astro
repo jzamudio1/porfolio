@@ -1,30 +1,31 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro"
-const EXPERIENCE = [
-  {
-    date: "Actualmente...",
-    title: "Senior Developer",
-    company: "NTT DATA Spain",
-    description:
-      "Análisis funcional y técnico y desarrollo Sénior en aplicaciones empresariales. Especializado en optimización y administración de bases de datos Oracle y PostgreSQL. Participación en proyectos de migración tecnológica a Angular de aplicaciones. Experiencia en automatización, control de versiones con Git y Bitbucket y despliegue continuo mediante Bamboo, mejorando la eficiencia operativa.Además, cuenta con experiencia en gestión de equipos y relación directa con el cliente, coordinando desarrollos, recogiendo requisitos y resolviendo incidencias para garantizar la calidad y continuidad de los servicios.",
-    // link: "",
-  },
-  // {
-  //   date: "Septiembre 2022",
-  //   title: "Principal Frontend Engineer",
-  //   company: "Adevinta Spain",
-  //   description:
-  //     "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
-  // },
+const responsibilities = [
+  "Desarrollo y evolución end-to-end de aplicaciones estratégicas del sector energético, desde requisitos y diseño técnico hasta pruebas, despliegue, soporte y mejora continua.",
+  "Diseño, desarrollo y mantenimiento de backend con Oracle PL/SQL y PostgreSQL PL/pgSQL, incluyendo consultas, procedimientos almacenados, procesos de base de datos y tareas de administración.",
+  "Optimización de sentencias SQL y procesos de base de datos para reforzar rendimiento, estabilidad y mantenibilidad.",
+  "Desarrollo frontend y mobile/web con Angular, TypeScript, HTML, CSS e Ionic, además de integraciones, middleware .NET y REST APIs.",
+  "Análisis funcional y técnico de nuevos desarrollos, evolutivos e incidencias con seguimiento en Jira, Confluence y ServiceNow.",
+  "Gestión de versiones, ramas y despliegues con Git, Bitbucket y Bamboo, colaborando en migraciones Angular y continuidad funcional.",
+  "Coordinación y supervisión de tareas del equipo, comunicación directa con cliente y seguimiento de calidad, prioridades, plazos y entregas.",
+  "Diseño e implementación de automatizaciones, agentes inteligentes y soluciones de IA aplicada para reducir tareas manuales y mejorar la eficiencia operativa.",
 ]
 ---
 
-<ol class="relative mt-16">
-  {
-    EXPERIENCE.map((experience) => (
-      <li class="">
-        <ExperienceItem {...experience} />
+<article class="rounded-2xl border border-gray-200/80 bg-white/70 p-6 md:p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900/50">
+  <div class="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+    <div>
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Software Engineer</h3>
+      <p class="mt-1 text-lg font-semibold text-blue-600 dark:text-blue-400">NTT DATA Europe & LATAM</p>
+    </div>
+    <time class="text-sm font-medium text-gray-500 dark:text-gray-400">Marzo 2022 — Actualidad</time>
+  </div>
+
+  <ul class="mt-6 grid gap-3 text-gray-700 dark:text-gray-300">
+    {responsibilities.map((item) => (
+      <li class="flex gap-3 leading-relaxed">
+        <span class="mt-2 size-1.5 shrink-0 rounded-full bg-yellow-400"></span>
+        <span>{item}</span>
       </li>
-    ))
-  }
-</ol>
+    ))}
+  </ul>
+</article>

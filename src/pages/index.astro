@@ -1,51 +1,67 @@
 ---
 import Layout from "@/layouts/Layout.astro"
-
-import AboutMe from "@/components/AboutMe.astro"
+import Hero from "@/components/Hero.astro"
+import Experience from "@/components/Experience.astro"
+import ProfessionalProjects from "@/components/ProfessionalProjects.astro"
+import Projects from "@/components/Projects.astro"
+import Skills from "@/components/Skills.astro"
+import Education from "@/components/Education.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import TitleSection from "@/components/TitleSection.astro"
 import Briefcase from "@/components/icons/Briefcase.astro"
 import CodeIcon from "@/components/icons/Code.astro"
-import Experience from "@/components/Experience.astro"
 import ProfileCheck from "@/components/icons/ProfileCheck.astro"
-import Projects from "@/components/Projects.astro"
-import SectionContainer from "@/components/SectionContainer.astro"
-import Hero from "@/components/Hero.astro"
-import TitleSection from "@/components/TitleSection.astro"
 ---
 
 <Layout
-  title="Porfolio de Jesús Zamudio - Desarrollador y Programador Sénior."
-  description="Portfolio de Jesús Zamudio, Software Engineer especializado en desarrollo full stack, bases de datos, cloud y automatización."
+  title="Jesús Zamudio Noguera | Software Engineer"
+  description="Portfolio profesional de Jesús Zamudio Noguera, Software Engineer especializado en Oracle PL/SQL, PostgreSQL, Angular, .NET, OCI, ORDS, automatización e IA aplicada al desarrollo."
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
+      <Hero />
     </SectionContainer>
+
     <div class="space-y-24">
-    <SectionContainer id="experiencia">
-      <TitleSection>
-        <Briefcase class="size-8" />
-        Experiencia laboral
-      </TitleSection>
-      <Experience />
-    </SectionContainer>
+      <SectionContainer id="experiencia">
+        <TitleSection>
+          <Briefcase class="size-8" />
+          Experiencia profesional
+        </TitleSection>
+        <Experience />
+      </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <TitleSection>
-        <CodeIcon class="size-7" />
-        Proyectos personales
-      </TitleSection>
-      <Projects />
-    </SectionContainer>
+      <SectionContainer id="proyectos-profesionales">
+        <TitleSection>
+          <Briefcase class="size-7" />
+          Proyectos destacados
+        </TitleSection>
+        <ProfessionalProjects />
+      </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
-      <TitleSection>
-        <ProfileCheck class="size-8" />
-        Sobre mí
-      </TitleSection>
-      <AboutMe />
-    </SectionContainer>
-  </div>
+      <SectionContainer id="proyectos">
+        <TitleSection>
+          <CodeIcon class="size-7" />
+          Proyectos personales
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
+
+      <SectionContainer id="habilidades">
+        <TitleSection>
+          <ProfileCheck class="size-8" />
+          Habilidades técnicas
+        </TitleSection>
+        <Skills />
+      </SectionContainer>
+
+      <SectionContainer id="formacion">
+        <TitleSection>
+          <ProfileCheck class="size-8" />
+          Formación e idiomas
+        </TitleSection>
+        <Education />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>
