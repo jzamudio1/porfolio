@@ -1,11 +1,12 @@
-import { defineConfig } from 'astro/config'
-import tailwind from "@astrojs/tailwind"
+import { defineConfig } from "astro/config"
+import sitemap from "@astrojs/sitemap"
+import tailwindcss from "@tailwindcss/vite"
 
-import robotsTxt from "astro-robots-txt"
-
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), robotsTxt()],
-  site: 'https://jzamudio1.github.io',
-  base: '/porfolio'
+  site: "https://jzamudio1.github.io",
+  base: "/porfolio",
+  integrations: [sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 })

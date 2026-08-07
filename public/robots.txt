@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jzamudio1.github.io/porfolio/sitemap-index.xml
