@@ -1,36 +1,19 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import LinkButton from "./LinkButton.astro"
+import { cvContent, type Lang } from "@/i18n/content"
 
-const PROJECTS = [
-  {
-    title: "pg_metadata",
-    eyebrow: "PostgreSQL extension",
-    description:
-      "Extensión de PostgreSQL para extraer el DDL de objetos de base de datos. Replica en PostgreSQL una experiencia similar a Oracle DBMS_METADATA, permitiendo recuperar definiciones mediante consultas SQL simples o código PL/pgSQL.",
-    github: "https://github.com/jzamudio1/pg_metadata",
-    tags: ["PostgreSQL", "PL/pgSQL", "SQL", "DDL"],
-  },
-  {
-    title: "PadelAcademy",
-    eyebrow: "Mobile application",
-    description:
-      "Aplicación móvil para la gestión de alumnos y monitores de una academia de pádel. Construida con Expo Router y React Native, con Supabase y PostgreSQL como backend y capa de persistencia.",
-    tags: ["React Native", "Expo", "Expo Router", "Supabase", "PostgreSQL"],
-  },
-  {
-    title: "OCI Autonomous Database & ORDS",
-    eyebrow: "Cloud & backend architecture",
-    description:
-      "Entorno personal en Oracle Cloud Infrastructure con Oracle Autonomous Database para Transaction Processing y ORDS habilitado. Lo utilizo para desarrollar y probar servicios REST, SQL/PLSQL y proyectos de arquitectura dinámica sobre Oracle Cloud.",
-    tags: ["OCI", "Autonomous Database", "ORDS", "Oracle SQL", "PL/SQL", "REST"],
-  },
-]
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const copy = cvContent[lang].personalProjects
 ---
 
 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
   {
-    PROJECTS.map(({ title, eyebrow, description, tags, github }) => (
+    copy.projects.map(({ title, eyebrow, description, tags, github }) => (
       <article class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200/80 bg-white/70 p-6 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl dark:border-gray-800 dark:bg-gray-900/60 dark:hover:border-blue-500/50">
         <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
@@ -46,7 +29,7 @@ const PROJECTS = [
           {description}
         </p>
 
-        <ul class="mt-5 flex flex-wrap gap-2" aria-label={`Tecnologías de ${title}`}>
+        <ul class="mt-5 flex flex-wrap gap-2" aria-label={`${copy.technologiesLabel} ${title}`}>
           {tags.map((tag) => (
             <li class="rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-medium text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300">
               {tag}
@@ -58,7 +41,7 @@ const PROJECTS = [
           <footer class="mt-6">
             <LinkButton href={github}>
               <GitHub class="size-5" />
-              Ver en GitHub
+              {copy.githubLabel}
             </LinkButton>
           </footer>
         )}

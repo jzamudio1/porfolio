@@ -1,14 +1,23 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro"
+import LanguageToggle from "./LanguageToggle.astro"
+import { cvContent, type Lang } from "@/i18n/content"
 
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const copy = cvContent[lang].nav
 const rawBaseUrl = import.meta.env.BASE_URL
 const baseUrl = rawBaseUrl.endsWith("/") ? rawBaseUrl : `${rawBaseUrl}/`
+const pageBase = lang === "en" ? `${baseUrl}en/` : baseUrl
 const navItems = [
-  { title: "Experiencia", label: "experiencia", url: `${baseUrl}#experiencia` },
-  { title: "Proyectos", label: "proyectos", url: `${baseUrl}#proyectos-profesionales` },
-  { title: "Habilidades", label: "habilidades", url: `${baseUrl}#habilidades` },
-  { title: "Formación", label: "formacion", url: `${baseUrl}#formacion` },
-  { title: "Contacto", label: "contacto", url: "mailto:jesuszamudionoguera@gmail.com" },
+  { title: copy.experience, label: "experiencia", url: `${pageBase}#experiencia` },
+  { title: copy.projects, label: "proyectos", url: `${pageBase}#proyectos-profesionales` },
+  { title: copy.skills, label: "habilidades", url: `${pageBase}#habilidades` },
+  { title: copy.education, label: "formacion", url: `${pageBase}#formacion` },
+  { title: copy.contact, label: "contacto", url: "mailto:jesuszamudionoguera@gmail.com" },
 ]
 ---
 
@@ -19,14 +28,16 @@ const navItems = [
         {link.title}
       </a>
     ))}
-    <ThemeToggle />
+    <span class="mx-1 h-5 w-px shrink-0 bg-gray-300/70 dark:bg-gray-600/70" aria-hidden="true"></span>
+    <LanguageToggle lang={lang} />
+    <ThemeToggle lang={lang} />
   </nav>
 </header>
 
 <script>
   document.addEventListener("astro:page-load", () => {
     const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const navItems = document.querySelectorAll("header nav a[aria-label]")
 
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {

@@ -1,27 +1,25 @@
 ---
-const responsibilities = [
-  "Desarrollo y evolución end-to-end de aplicaciones estratégicas del sector energético, desde requisitos y diseño técnico hasta pruebas, despliegue, soporte y mejora continua.",
-  "Diseño, desarrollo y mantenimiento de backend con Oracle PL/SQL y PostgreSQL PL/pgSQL, incluyendo consultas, procedimientos almacenados, procesos de base de datos y tareas de administración.",
-  "Optimización de sentencias SQL y procesos de base de datos para reforzar rendimiento, estabilidad y mantenibilidad.",
-  "Desarrollo frontend y mobile/web con Angular, TypeScript, HTML, CSS e Ionic, además de integraciones, middleware .NET y REST APIs.",
-  "Análisis funcional y técnico de nuevos desarrollos, evolutivos e incidencias con seguimiento en Jira, Confluence y ServiceNow.",
-  "Gestión de versiones, ramas y despliegues con Git, Bitbucket y Bamboo, colaborando en migraciones Angular y continuidad funcional.",
-  "Coordinación y supervisión de tareas del equipo, comunicación directa con cliente y seguimiento de calidad, prioridades, plazos y entregas.",
-  "Diseño e implementación de automatizaciones, agentes inteligentes y soluciones de IA aplicada para reducir tareas manuales y mejorar la eficiencia operativa.",
-]
+import { cvContent, type Lang } from "@/i18n/content"
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const copy = cvContent[lang].experience
 ---
 
 <article class="rounded-2xl border border-gray-200/80 bg-white/70 p-6 md:p-8 shadow-sm dark:border-gray-800 dark:bg-gray-900/50">
   <div class="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
     <div>
-      <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Software Engineer</h3>
-      <p class="mt-1 text-lg font-semibold text-blue-600 dark:text-blue-400">NTT DATA Europe & LATAM</p>
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white">{copy.role}</h3>
+      <p class="mt-1 text-lg font-semibold text-blue-600 dark:text-blue-400">{copy.company}</p>
     </div>
-    <time class="text-sm font-medium text-gray-500 dark:text-gray-400">Marzo 2022 — Actualidad</time>
+    <time class="text-sm font-medium text-gray-500 dark:text-gray-400">{copy.period}</time>
   </div>
 
   <ul class="mt-6 grid gap-3 text-gray-700 dark:text-gray-300">
-    {responsibilities.map((item) => (
+    {copy.responsibilities.map((item) => (
       <li class="flex gap-3 leading-relaxed">
         <span class="mt-2 size-1.5 shrink-0 rounded-full bg-yellow-400"></span>
         <span>{item}</span>

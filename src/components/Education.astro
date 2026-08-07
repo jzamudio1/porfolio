@@ -1,15 +1,27 @@
+---
+import { cvContent, type Lang } from "@/i18n/content"
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const copy = cvContent[lang].education
+---
+
 <div class="grid gap-5 md:grid-cols-2">
   <article class="rounded-2xl border border-gray-200/80 bg-white/70 p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900/50">
-    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">Formación</p>
-    <h3 class="mt-2 text-lg font-bold text-gray-900 dark:text-white">Técnico Superior en Desarrollo de Aplicaciones Multiplataforma</h3>
-    <p class="mt-2 text-gray-600 dark:text-gray-400">Santa Joaquina de Vedruna · 2019 — 2021</p>
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">{copy.educationLabel}</p>
+    <h3 class="mt-2 text-lg font-bold text-gray-900 dark:text-white">{copy.degree}</h3>
+    <p class="mt-2 text-gray-600 dark:text-gray-400">{copy.school}</p>
   </article>
 
   <article class="rounded-2xl border border-gray-200/80 bg-white/70 p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900/50">
-    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">Idiomas</p>
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">{copy.languagesLabel}</p>
     <div class="mt-3 space-y-3 text-gray-700 dark:text-gray-300">
-      <p><strong class="text-gray-900 dark:text-white">Español:</strong> nativo</p>
-      <p><strong class="text-gray-900 dark:text-white">Inglés:</strong> intermedio</p>
+      {copy.languages.map((language) => (
+        <p><strong class="text-gray-900 dark:text-white">{language.name}:</strong> {language.level}</p>
+      ))}
     </div>
   </article>
 </div>

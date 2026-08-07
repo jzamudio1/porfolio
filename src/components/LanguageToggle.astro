@@ -1,0 +1,41 @@
+---
+import SpainFlag from "./icons/SpainFlag.astro"
+import UsFlag from "./icons/UsFlag.astro"
+import type { Lang } from "@/i18n/content"
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const rawBaseUrl = import.meta.env.BASE_URL
+const baseUrl = rawBaseUrl.endsWith("/") ? rawBaseUrl : `${rawBaseUrl}/`
+const targetHref = lang === "es" ? `${baseUrl}en/` : baseUrl
+const label = lang === "es" ? "Cambiar idioma a inglés" : "Switch language to Spanish"
+const currentLanguage = lang === "es" ? "Español" : "English"
+---
+
+<a
+  href={targetHref}
+  data-language-target={targetHref}
+  class="ml-1 grid size-9 shrink-0 place-items-center rounded-full border border-transparent transition hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 dark:hover:bg-gray-700"
+  aria-label={label}
+  title={`${currentLanguage} · ${label}`}
+>
+  <span class="flex h-[18px] w-7 overflow-hidden rounded-[3px] shadow-sm ring-1 ring-black/10 dark:ring-white/15">
+    {lang === "es" ? <SpainFlag class="h-full w-full" /> : <UsFlag class="h-full w-full" />}
+  </span>
+  <span class="sr-only">{label}</span>
+</a>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const languageToggle = document.querySelector("[data-language-target]")
+    if (!(languageToggle instanceof HTMLAnchorElement)) return
+
+    const target = languageToggle.dataset.languageTarget ?? languageToggle.href
+    languageToggle.onclick = () => {
+      languageToggle.href = `${target}${window.location.hash}`
+    }
+  })
+</script>

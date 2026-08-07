@@ -2,6 +2,30 @@
 import SunIcon from "./icons/Sun.astro"
 import MoonIcon from "./icons/Moon.astro"
 import SystemIcon from "./icons/System.astro"
+import type { Lang } from "@/i18n/content"
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const copy = lang === "en"
+  ? {
+      initial: "Change theme",
+      system: "System",
+      light: "Light",
+      dark: "Dark",
+      prefix: "Theme",
+      changeTo: "Switch to",
+    }
+  : {
+      initial: "Cambiar tema",
+      system: "Sistema",
+      light: "Claro",
+      dark: "Oscuro",
+      prefix: "Tema",
+      changeTo: "Cambiar a",
+    }
 ---
 
 <div class="relative ml-1 mr-1 shrink-0">
@@ -9,8 +33,13 @@ import SystemIcon from "./icons/System.astro"
     id="theme-toggle-btn"
     type="button"
     class="relative grid size-9 place-items-center rounded-full border border-transparent text-gray-600 transition hover:bg-gray-100 hover:text-gray-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 dark:text-gray-200 dark:hover:bg-gray-700 dark:hover:text-white"
-    aria-label="Cambiar tema"
-    title="Cambiar tema"
+    aria-label={copy.initial}
+    title={copy.initial}
+    data-system-label={copy.system}
+    data-light-label={copy.light}
+    data-dark-label={copy.dark}
+    data-theme-prefix={copy.prefix}
+    data-change-to={copy.changeTo}
   >
     <SunIcon id="light" class="theme-toggle-icon absolute size-5 transition duration-200" />
     <MoonIcon id="dark" class="theme-toggle-icon absolute size-5 transition duration-200" />
@@ -19,69 +48,73 @@ import SystemIcon from "./icons/System.astro"
 </div>
 
 <script is:inline>
-  const themeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
-  const themeOrder = ["system", "light", "dark"]
-  const themeLabels = {
-    system: "Sistema",
-    light: "Claro",
-    dark: "Oscuro",
-  }
+  (() => {
+    const themeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+    const themeOrder = ["system", "light", "dark"]
 
-  const getThemePreference = () => localStorage.getItem("theme") ?? "system"
+    const getThemePreference = () => localStorage.getItem("theme") ?? "system"
 
-  const updateThemeIcon = (themePreference) => {
-    document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
-      const isActive = element.id === themePreference
-      element.style.opacity = isActive ? "1" : "0"
-      element.style.transform = isActive ? "scale(1) rotate(0deg)" : "scale(0.65) rotate(-20deg)"
+    const updateThemeIcon = (themePreference) => {
+      document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
+        const isActive = element.id === themePreference
+        element.style.opacity = isActive ? "1" : "0"
+        element.style.transform = isActive
+          ? "scale(1) rotate(0deg)"
+          : "scale(0.65) rotate(-20deg)"
+      })
+    }
+
+    const updateThemeButtonLabel = (themePreference) => {
+      const button = document.getElementById("theme-toggle-btn")
+      if (!(button instanceof HTMLButtonElement)) return
+
+      const labels = {
+        system: button.dataset.systemLabel ?? "System",
+        light: button.dataset.lightLabel ?? "Light",
+        dark: button.dataset.darkLabel ?? "Dark",
+      }
+      const currentIndex = themeOrder.indexOf(themePreference)
+      const nextTheme = themeOrder[(currentIndex + 1) % themeOrder.length]
+      const prefix = button.dataset.themePrefix ?? "Theme"
+      const changeTo = button.dataset.changeTo ?? "Switch to"
+      const label = `${prefix}: ${labels[themePreference]}. ${changeTo} ${labels[nextTheme]}`
+
+      button.setAttribute("aria-label", label)
+      button.setAttribute("title", label)
+    }
+
+    const applyTheme = (themePreference) => {
+      const isDark =
+        themePreference === "dark" ||
+        (themePreference === "system" && themeMediaQuery.matches)
+
+      document.documentElement.classList.toggle("dark", isDark)
+      updateThemeIcon(themePreference)
+      updateThemeButtonLabel(themePreference)
+    }
+
+    const cycleTheme = () => {
+      const currentTheme = getThemePreference()
+      const currentIndex = themeOrder.indexOf(currentTheme)
+      const nextTheme = themeOrder[(currentIndex + 1) % themeOrder.length]
+
+      localStorage.setItem("theme", nextTheme)
+      applyTheme(nextTheme)
+    }
+
+    const initThemeToggle = () => {
+      const button = document.getElementById("theme-toggle-btn")
+      if (!(button instanceof HTMLButtonElement)) return
+
+      button.onclick = cycleTheme
+      applyTheme(getThemePreference())
+    }
+
+    initThemeToggle()
+    document.addEventListener("astro:page-load", initThemeToggle)
+
+    themeMediaQuery.addEventListener("change", () => {
+      if (getThemePreference() === "system") applyTheme("system")
     })
-  }
-
-  const updateThemeButtonLabel = (themePreference) => {
-    const button = document.getElementById("theme-toggle-btn")
-    if (!button) return
-
-    const currentIndex = themeOrder.indexOf(themePreference)
-    const nextTheme = themeOrder[(currentIndex + 1) % themeOrder.length]
-    const currentLabel = themeLabels[themePreference]
-    const nextLabel = themeLabels[nextTheme]
-    const label = `Tema: ${currentLabel}. Cambiar a ${nextLabel}`
-
-    button.setAttribute("aria-label", label)
-    button.setAttribute("title", label)
-  }
-
-  const applyTheme = (themePreference) => {
-    const isDark =
-      themePreference === "dark" ||
-      (themePreference === "system" && themeMediaQuery.matches)
-
-    document.documentElement.classList.toggle("dark", isDark)
-    updateThemeIcon(themePreference)
-    updateThemeButtonLabel(themePreference)
-  }
-
-  const cycleTheme = () => {
-    const currentTheme = getThemePreference()
-    const currentIndex = themeOrder.indexOf(currentTheme)
-    const nextTheme = themeOrder[(currentIndex + 1) % themeOrder.length]
-
-    localStorage.setItem("theme", nextTheme)
-    applyTheme(nextTheme)
-  }
-
-  const initThemeToggle = () => {
-    const button = document.getElementById("theme-toggle-btn")
-    if (!button) return
-
-    button.onclick = cycleTheme
-    applyTheme(getThemePreference())
-  }
-
-  initThemeToggle()
-  document.addEventListener("astro:page-load", initThemeToggle)
-
-  themeMediaQuery.addEventListener("change", () => {
-    if (getThemePreference() === "system") applyTheme("system")
-  })
+  })()
 </script>

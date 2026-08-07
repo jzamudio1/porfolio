@@ -1,14 +1,21 @@
 ---
+import DownloadIcon from "@/components/icons/Download.astro"
+import LinkedInIcon from "@/components/icons/LinkedIn.astro"
+import MailIcon from "@/components/icons/Mail.astro"
+import SocialPill from "@/components/SocialPill.astro"
+import { cvContent, type Lang } from "@/i18n/content"
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const copy = cvContent[lang].hero
 const personalImageAlt = "Jesús Zamudio Noguera"
 const rawBaseUrl = import.meta.env.BASE_URL
 const baseUrl = rawBaseUrl.endsWith("/") ? rawBaseUrl : `${rawBaseUrl}/`
 const profileImageUrl = `${baseUrl}jzamudio.png`
 const cvUrl = `${baseUrl}cv/CV_Jesus_Zamudio_Noguera.pdf`
-
-import DownloadIcon from "@/components/icons/Download.astro"
-import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
-import SocialPill from "@/components/SocialPill.astro"
 ---
 
 <div class="max-w-3xl">
@@ -17,7 +24,7 @@ import SocialPill from "@/components/SocialPill.astro"
   </div>
 
   <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
-    Software Engineer · Sevilla, España
+    {copy.location}
   </p>
 
   <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
@@ -25,20 +32,19 @@ import SocialPill from "@/components/SocialPill.astro"
   </h1>
 
   <p class="mt-6 text-xl leading-relaxed text-gray-700 dark:text-gray-300">
-    Software Engineer con <strong class="font-semibold text-yellow-500 dark:text-yellow-200">más de 4 años de experiencia</strong> en desarrollo, evolución y soporte de aplicaciones empresariales del sector energético. Especializado en Oracle PL/SQL, PostgreSQL PL/pgSQL, Angular, TypeScript, Ionic y .NET, con experiencia en optimización SQL, integraciones, migraciones, coordinación de equipo y comunicación directa con cliente.
+    {copy.intro.before}
+    <strong class="font-semibold text-yellow-500 dark:text-yellow-200">{copy.intro.highlight}</strong>
+    {copy.intro.after}
   </p>
 
   <p class="mt-4 text-gray-600 dark:text-gray-400">
-    Participación integral en el ciclo de vida del software: análisis de requisitos, diseño técnico, desarrollo, pruebas, despliegue, soporte y mejora continua, incorporando automatización e IA para mejorar la eficiencia operativa.
+    {copy.lifecycle}
   </p>
 
   <div class="mt-6 flex flex-wrap gap-2 text-sm text-gray-600 dark:text-gray-300">
-    <span class="rounded-full border border-gray-200 px-3 py-1 dark:border-gray-700">Oracle PL/SQL</span>
-    <span class="rounded-full border border-gray-200 px-3 py-1 dark:border-gray-700">PostgreSQL</span>
-    <span class="rounded-full border border-gray-200 px-3 py-1 dark:border-gray-700">Angular</span>
-    <span class="rounded-full border border-gray-200 px-3 py-1 dark:border-gray-700">.NET</span>
-    <span class="rounded-full border border-gray-200 px-3 py-1 dark:border-gray-700">OCI & ORDS</span>
-    <span class="rounded-full border border-gray-200 px-3 py-1 dark:border-gray-700">IA & automatización</span>
+    {copy.tags.map((tag) => (
+      <span class="rounded-full border border-gray-200 px-3 py-1 dark:border-gray-700">{tag}</span>
+    ))}
   </div>
 
   <div class="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-600 dark:text-gray-400">
@@ -46,18 +52,18 @@ import SocialPill from "@/components/SocialPill.astro"
     <a class="hover:text-blue-500" href="mailto:jesuszamudionoguera@gmail.com">jesuszamudionoguera@gmail.com</a>
   </div>
 
-  <nav class="flex flex-wrap gap-4 mt-8" aria-label="Enlaces profesionales">
+  <nav class="flex flex-wrap gap-4 mt-8" aria-label={copy.linksAria}>
     <SocialPill href={cvUrl} download="CV_Jesus_Zamudio_Noguera.pdf">
       <DownloadIcon class="size-4" />
-      Descargar CV
+      {copy.downloadCv}
     </SocialPill>
     <SocialPill href="https://www.linkedin.com/in/jes%C3%BAszamudio">
       <LinkedInIcon class="size-4" />
-      LinkedIn
+      {copy.linkedin}
     </SocialPill>
     <SocialPill href="mailto:jesuszamudionoguera@gmail.com">
       <MailIcon class="size-4" />
-      Contacto
+      {copy.contact}
     </SocialPill>
   </nav>
 </div>

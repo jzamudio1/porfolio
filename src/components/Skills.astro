@@ -1,26 +1,16 @@
 ---
-const groups = [
-  {
-    title: "Análisis y gestión",
-    items: ["Análisis funcional y técnico", "Toma de requisitos", "Gestión de incidencias", "Coordinación de equipo", "Comunicación con cliente"],
-  },
-  {
-    title: "Tecnologías",
-    items: ["Oracle PL/SQL", "Oracle Forms", "Oracle ORDS", "Oracle APEX", "Oracle Cloud (OCI)", "PostgreSQL PL/pgSQL", "SQL", "Angular", "TypeScript", "HTML5", "CSS3", "Ionic", "C#/.NET", "REST APIs"],
-  },
-  {
-    title: "DevOps y herramientas",
-    items: ["Git", "Bitbucket", "Bamboo", "Jira", "Confluence", "ServiceNow", "Postman", "Bruno", "SQL*Plus", "SQLLoader", "DBeaver", "Visual Studio Code"],
-  },
-  {
-    title: "Sistemas, IA y otros",
-    items: ["Linux/Unix", "Windows Server", "IA aplicada al desarrollo", "Agentes inteligentes", "Automatización de procesos", "Java", "React", "Docker", "Kubernetes"],
-  },
-]
+import { cvContent, type Lang } from "@/i18n/content"
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const copy = cvContent[lang].skills
 ---
 
 <div class="grid gap-5 md:grid-cols-2">
-  {groups.map((group) => (
+  {copy.groups.map((group) => (
     <article class="rounded-2xl border border-gray-200/80 bg-white/70 p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900/50">
       <h3 class="text-lg font-bold text-gray-900 dark:text-white">{group.title}</h3>
       <ul class="mt-4 flex flex-wrap gap-2">

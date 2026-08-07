@@ -1,7 +1,16 @@
 ---
+import { cvContent, type Lang } from "@/i18n/content"
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const copy = cvContent[lang].footer
 const currentYear = new Date().getFullYear()
 const rawBaseUrl = import.meta.env.BASE_URL
 const baseUrl = rawBaseUrl.endsWith("/") ? rawBaseUrl : `${rawBaseUrl}/`
+const homeUrl = lang === "en" ? `${baseUrl}en/` : baseUrl
 ---
 
 <footer
@@ -13,17 +22,17 @@ const baseUrl = rawBaseUrl.endsWith("/") ? rawBaseUrl : `${rawBaseUrl}/`
     <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
       >&copy; {currentYear}
       <a class="hover:underline"> Jesús Zamudio</a>.
-      Todos los derechos reservados
+      {copy.rights}
     </span>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
     >
       <li>
-        <a href={baseUrl} class="hover:underline me-4 md:me-6">Inicio</a>
+        <a href={homeUrl} class="hover:underline me-4 md:me-6">{copy.home}</a>
       </li>
       <li>
         <a id="contacto" href="mailto:jesuszamudionoguera@gmail.com" class="hover:underline"
-          >Contacto</a
+          >{copy.contact}</a
         >
       </li>
     </ul>
