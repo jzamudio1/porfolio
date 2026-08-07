@@ -25,7 +25,7 @@ export const cvContent = {
       location: "Software Engineer · Sevilla, España",
       intro: {
         before: "Software Engineer con",
-        highlight: "más de 4 años de experiencia",
+        highlight: " más de 4 años de experiencia ",
         after:
           "en desarrollo, evolución y soporte de aplicaciones empresariales del sector energético. Especializado en Oracle PL/SQL, PostgreSQL PL/pgSQL, Angular, TypeScript, Ionic y .NET, con experiencia en optimización SQL, integraciones, migraciones, coordinación de equipo y comunicación directa con cliente.",
       },
