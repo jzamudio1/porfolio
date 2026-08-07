@@ -2,8 +2,8 @@
 
 Portfolio profesional desarrollado para presentar mi experiencia como **Software Engineer**, proyectos profesionales, proyectos personales y stack tecnológico.
 
-🌐 **Portfolio:** [jzamudio1.github.io/porfolio](https://jzamudio1.github.io/porfolio/)
-💻 **Repositorio:** [github.com/jzamudio1/porfolio](https://github.com/jzamudio1/porfolio)
+🌐 **Portfolio:** [jzamudio1.github.io/porfolio](https://jzamudio1.github.io/portafolio/)
+💻 **Repositorio:** [github.com/jzamudio1/porfolio](https://github.com/jzamudio1/portafolio)
 
 ---
 
