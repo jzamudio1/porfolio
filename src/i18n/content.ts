@@ -215,7 +215,7 @@ export const cvContent = {
       location: "Software Engineer · Seville, Spain",
       intro: {
         before: "Software Engineer with ",
-        highlight: "more than 4 years of experience",
+        highlight: "more than 4 years of experience ",
         after:
           "developing, evolving and supporting enterprise applications in the energy sector. Specialized in Oracle PL/SQL, PostgreSQL PL/pgSQL, Angular, TypeScript, Ionic and .NET, with experience in SQL optimization, integrations, migrations, team coordination and direct client communication.",
       },
