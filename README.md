@@ -2,8 +2,8 @@
 
 Portfolio profesional desarrollado para presentar mi experiencia como **Software Engineer**, proyectos profesionales, proyectos personales y stack tecnológico.
 
-🌐 **Portfolio:** [jzamudio1.github.io/porfolio](https://jzamudio1.github.io/portafolio/)
-💻 **Repositorio:** [github.com/jzamudio1/porfolio](https://github.com/jzamudio1/portafolio)
+🌐 **Portafolio:** [jzamudio1.github.io/portafolio](https://jzamudio1.github.io/portafolio/)
+💻 **Repositorio:** [github.com/jzamudio1/portafolio](https://github.com/jzamudio1/portafolio)
 
 ---
 
@@ -264,7 +264,7 @@ Por defecto, Astro mostrará la URL local en la terminal.
 Normalmente:
 
 ```text
-http://localhost:4321/porfolio/
+http://localhost:4321/portafolio/
 ```
 
 ---
@@ -340,7 +340,7 @@ El portfolio se publica mediante **GitHub Pages**.
 
 URL de producción:
 
-👉 https://jzamudio1.github.io/porfolio/
+👉 https://jzamudio1.github.io/portafolio/
 
 La rama de producción es:
 
@@ -364,7 +364,7 @@ Software Engineer — Sevilla, España
 
 ## 📄 Licencia
 
-Este repositorio contiene mi portfolio profesional y su código fuente.
+Este repositorio contiene mi portafolio profesional y su código fuente.
 
 El contenido relacionado con mi experiencia profesional se presenta únicamente con fines informativos y de portfolio.
 
