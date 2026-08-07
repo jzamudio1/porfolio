@@ -1,74 +1,95 @@
-# Jesús Zamudio Noguera — Portfolio
+# 👨‍💻 Jesús Zamudio Noguera — Portfolio
 
-Portfolio profesional desarrollado para presentar mi experiencia como **Software Engineer**, proyectos profesionales, proyectos personales y stack tecnológico.
+Portfolio profesional de **Jesús Zamudio Noguera**, Software Engineer especializado en desarrollo de aplicaciones empresariales, bases de datos, desarrollo full stack, cloud, automatización e IA aplicada al desarrollo.
 
-🌐 **Portafolio:** [jzamudio1.github.io/portafolio](https://jzamudio1.github.io/portafolio/)
-💻 **Repositorio:** [github.com/jzamudio1/portafolio](https://github.com/jzamudio1/portafolio)
+El proyecto funciona como una versión web de mi CV, mostrando mi experiencia profesional, proyectos, habilidades técnicas y formación.
+
+[![Astro](https://img.shields.io/badge/Astro-7.2-BC52EE?logo=astro&logoColor=white)](https://astro.build/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub_Pages-222222?logo=github)](https://pages.github.com/)
+[![GitHub Actions](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-2088FF?logo=githubactions&logoColor=white)](https://github.com/features/actions)
+
+---
+
+## 🌐 Portfolio
+
+### 🇪🇸 Español
+
+👉 **https://jzamudio1.github.io/portafolio/**
+
+### 🇺🇸 English
+
+👉 **https://jzamudio1.github.io/portafolio/en/**
+
+El portfolio incluye un selector de idioma desde la propia navegación para cambiar entre las versiones española e inglesa.
+
+---
+
+## ✨ Características
+
+- 🌍 Portfolio completamente bilingüe **Español / English**
+- 🇪🇸 🇺🇸 Selector de idioma mediante banderas SVG
+- 🌙 ☀️ Selector de tema claro, oscuro y sistema
+- 📄 Descarga directa del CV en PDF
+- 📱 Diseño responsive
+- ⚡ Generación estática con Astro
+- 🎨 Tailwind CSS 4
+- 🔎 SEO con `canonical`, `hreflang` y sitemap
+- ✅ Validación automática con `astro check`
+- 🚀 Despliegue automático mediante GitHub Actions
+- 🌐 Hosting mediante GitHub Pages
+- 📦 Dependabot para mantener las dependencias actualizadas
 
 ---
 
 ## 👋 Sobre mí
 
-Soy **Software Engineer** con más de 4 años de experiencia en el desarrollo, evolución y soporte de aplicaciones empresariales, principalmente dentro del sector energético.
+Soy **Software Engineer con más de 4 años de experiencia** en desarrollo, evolución y soporte de aplicaciones empresariales, principalmente dentro del sector energético.
 
-Trabajo a lo largo de todo el ciclo de vida del software:
+Trabajo durante todo el ciclo de vida del software:
 
-* Análisis funcional y técnico
-* Toma de requisitos
-* Diseño y desarrollo
-* Pruebas y despliegues
-* Resolución de incidencias
-* Optimización y mantenimiento
-* Coordinación de equipo
-* Comunicación directa con cliente
-* Automatización e IA aplicada al desarrollo
+- Análisis funcional y técnico
+- Toma de requisitos
+- Diseño y desarrollo
+- Backend y bases de datos
+- Frontend y mobile
+- Integraciones
+- Optimización SQL
+- Pruebas y despliegues
+- Resolución de incidencias
+- Mantenimiento evolutivo
+- Coordinación de equipo
+- Comunicación con cliente
+- Automatización
+- IA aplicada al desarrollo
 
-Mi experiencia técnica está especialmente centrada en **Oracle, PostgreSQL, Angular, TypeScript, Ionic, .NET y APIs REST**.
+Mi experiencia técnica está especialmente centrada en:
 
----
-
-## 🚀 Stack del portfolio
-
-El portfolio está construido con tecnologías modernas y preparado para desplegarse automáticamente mediante GitHub Actions.
-
-### Frontend
-
-* Astro 7
-* Tailwind CSS 4
-* TypeScript
-* Onest Variable Font
-
-### Tooling
-
-* Node.js 24 LTS
-* npm
-* GitHub Actions
-* GitHub Pages
-* Dependabot
+`Oracle` · `PL/SQL` · `PostgreSQL` · `PL/pgSQL` · `Angular` · `TypeScript` · `Ionic` · `.NET` · `REST APIs` · `OCI` · `ORDS`
 
 ---
 
-## 🧩 Contenido del portfolio
+## 💼 Experiencia profesional
 
-El sitio funciona como una versión web de mi CV y está dividido en varias áreas.
+Actualmente trabajo como **Software Engineer en NTT DATA Europe & LATAM**, participando en proyectos tecnológicos dentro del sector energético.
 
-### Experiencia profesional
+Entre mis principales responsabilidades:
 
-Actualmente trabajo como **Software Engineer en NTT DATA Europe & LATAM**, participando en el desarrollo y evolución end-to-end de aplicaciones empresariales.
-
-Entre mis responsabilidades se encuentran:
-
-* Backend con Oracle PL/SQL y PostgreSQL PL/pgSQL
-* Desarrollo frontend con Angular y TypeScript
-* Desarrollo mobile/web con Ionic
-* Integraciones mediante .NET y REST APIs
-* Optimización SQL
-* Migraciones Angular
-* Gestión de incidencias
-* Automatización de tareas
-* Aplicación de IA al desarrollo
-* Coordinación de tareas dentro del equipo
-* Comunicación directa con cliente
+- Desarrollo backend con Oracle PL/SQL y PostgreSQL PL/pgSQL
+- Desarrollo frontend con Angular y TypeScript
+- Desarrollo mobile/web con Ionic
+- Middleware e integraciones mediante .NET
+- Desarrollo e integración de REST APIs
+- Optimización de consultas y procesos SQL
+- Análisis funcional y técnico
+- Gestión y resolución de incidencias
+- Migraciones Angular
+- Gestión de versiones y despliegues
+- Coordinación de tareas dentro del equipo
+- Comunicación directa con cliente
+- Automatización de tareas y procesos
+- Uso de IA y agentes inteligentes aplicados al desarrollo
 
 ---
 
@@ -76,192 +97,273 @@ Entre mis responsabilidades se encuentran:
 
 ### SIGMEL
 
-**Oracle PL/SQL · SQL · .NET · Angular · TypeScript**
-
 Sistema relacionado con la integración, tratamiento, gestión y validación de datos de medida.
 
-Trabajo realizado sobre:
+**Tecnologías**
 
-* Desarrollo evolutivo
-* Optimización SQL
-* Soporte técnico
-* Migración Angular
+`Oracle PL/SQL` · `SQL` · `.NET` · `Angular` · `TypeScript`
+
+---
 
 ### Interfaz SIE
 
-**PostgreSQL · PL/pgSQL · SQL · .NET**
-
 Integración e intercambio de información entre sistemas corporativos.
 
-Trabajo realizado sobre:
+**Tecnologías**
 
-* Desarrollo backend
-* Integraciones
-* Incidencias funcionales
-* Incidencias técnicas
-* Soporte
+`PostgreSQL` · `PL/pgSQL` · `SQL` · `.NET`
+
+---
 
 ### EMAPP
 
-**PostgreSQL · PL/pgSQL · Ionic · .NET**
-
 Aplicación orientada a la gestión y optimización de procesos de negocio.
 
-Trabajo realizado sobre:
+**Tecnologías**
 
-* Mobile/web
-* Backend
-* Middleware
-* Mantenimiento evolutivo
+`PostgreSQL` · `PL/pgSQL` · `Ionic` · `.NET`
+
+---
 
 ### IBOST
 
-**Oracle PL/SQL · SQL · .NET · Angular · TypeScript**
+Plataforma relacionada con procesos de liquidación dentro del sector energético.
 
-Plataforma de liquidaciones dentro del sector energético.
+**Tecnologías**
 
-Participación en:
-
-* Migración frontend
-* Compatibilidad técnica
-* Continuidad funcional
+`Oracle PL/SQL` · `SQL` · `.NET` · `Angular` · `TypeScript`
 
 ---
 
 ## 🧪 Proyectos personales
 
-### pg_metadata
+### 🐘 pg_metadata
 
-Extensión de PostgreSQL para recuperar el **DDL de objetos de base de datos**.
+Extensión para PostgreSQL orientada a recuperar el **DDL de objetos de base de datos**.
 
-El objetivo es ofrecer en PostgreSQL una experiencia similar al paquete `DBMS_METADATA` de Oracle, permitiendo recuperar definiciones mediante consultas SQL o código PL/pgSQL.
+El proyecto busca ofrecer en PostgreSQL una experiencia similar a `DBMS_METADATA` de Oracle, permitiendo obtener las definiciones de objetos mediante SQL o PL/pgSQL.
 
 **Tecnologías**
 
-* PostgreSQL
-* PL/pgSQL
-* SQL
-* DDL
+`PostgreSQL` · `PL/pgSQL` · `SQL` · `DDL`
 
-🔗 [github.com/jzamudio1/pg_metadata](https://github.com/jzamudio1/pg_metadata)
+🔗 https://github.com/jzamudio1/pg_metadata
 
 ---
 
-### PadelAcademy
+### 🎾 PadelAcademy
 
 Aplicación móvil para la gestión de alumnos y monitores de una academia de pádel.
 
 **Tecnologías**
 
-* React Native
-* Expo
-* Expo Router
-* Supabase
-* PostgreSQL
+`React Native` · `Expo` · `Expo Router` · `Supabase` · `PostgreSQL`
 
 ---
 
-### OCI Autonomous Database + ORDS
+### ☁️ OCI Autonomous Database + ORDS
 
-Entorno personal creado en **Oracle Cloud Infrastructure** para desarrollar y experimentar con arquitecturas basadas en Oracle Database.
+Entorno personal desarrollado sobre **Oracle Cloud Infrastructure** para experimentar con arquitecturas centradas en base de datos y servicios REST.
 
 Incluye:
 
-* Oracle Autonomous Database
-* Transaction Processing
-* Oracle REST Data Services
-* APIs REST
-* SQL
-* PL/SQL
-* Arquitecturas dinámicas sobre base de datos
+- Oracle Autonomous Database
+- Transaction Processing
+- Oracle REST Data Services
+- REST APIs
+- Oracle SQL
+- PL/SQL
+- Arquitecturas dinámicas sobre Oracle Cloud
+
+**Tecnologías**
+
+`OCI` · `Autonomous Database` · `ORDS` · `REST` · `Oracle SQL` · `PL/SQL`
 
 ---
 
-## 🛠️ Tecnologías con las que trabajo
+## 🛠️ Stack tecnológico
 
-### Bases de datos y backend
+### Portfolio
 
-* Oracle Database
-* Oracle PL/SQL
-* Oracle Forms
-* Oracle APEX
-* Oracle ORDS
-* PostgreSQL
-* PL/pgSQL
-* SQL
-* REST APIs
-* C# / .NET
+| Tecnología | Uso |
+|---|---|
+| Astro 7 | Framework principal |
+| Tailwind CSS 4 | Estilos |
+| TypeScript | Tipado y lógica |
+| Onest Variable | Tipografía |
+| Astro Sitemap | Sitemap y SEO |
+| GitHub Actions | CI/CD |
+| GitHub Pages | Hosting |
+| Dependabot | Actualización de dependencias |
+
+### Backend y bases de datos
+
+- Oracle Database
+- Oracle PL/SQL
+- Oracle Forms
+- Oracle APEX
+- Oracle ORDS
+- PostgreSQL
+- PL/pgSQL
+- SQL
+- C# / .NET
+- REST APIs
 
 ### Frontend y mobile
 
-* Angular
-* TypeScript
-* HTML5
-* CSS3
-* Ionic
-* React
-* React Native
-* Expo
+- Angular
+- TypeScript
+- HTML5
+- CSS3
+- Ionic
+- React
+- React Native
+- Expo
 
 ### Cloud y DevOps
 
-* Oracle Cloud Infrastructure
-* Git
-* Bitbucket
-* Bamboo
-* Docker
-* Kubernetes
-* GitHub Actions
+- Oracle Cloud Infrastructure
+- Git
+- GitHub
+- Bitbucket
+- Bamboo
+- Docker
+- Kubernetes
+- GitHub Actions
 
 ### Herramientas
 
-* Jira
-* Confluence
-* ServiceNow
-* Postman
-* Bruno
-* SQL*Plus
-* SQLLoader
-* DBeaver
-* Visual Studio Code
+- Jira
+- Confluence
+- ServiceNow
+- Postman
+- Bruno
+- SQL*Plus
+- SQLLoader
+- DBeaver
+- Visual Studio Code
 
 ### IA y automatización
 
-* IA aplicada al desarrollo
-* Agentes inteligentes
-* Automatización de procesos
-* Automatización de tareas operativas
+- IA aplicada al desarrollo
+- Agentes inteligentes
+- Automatización de procesos
+- Automatización de tareas operativas
 
 ---
 
-## 💻 Ejecutar el proyecto en local
+## 🌍 Internacionalización
 
-### Requisitos
+El portfolio dispone actualmente de dos idiomas:
 
-Se recomienda utilizar la versión de Node definida en `.nvmrc`.
+```text
+/
+└── Español
 
-Con NVM:
+/en/
+└── English
+```
+
+Los textos de ambas versiones están centralizados en:
+
+```text
+src/i18n/content.ts
+```
+
+Esto permite mantener sincronizado el contenido profesional sin duplicar la estructura de las páginas.
+
+Además, cada versión dispone de sus correspondientes etiquetas:
+
+```html
+<link rel="canonical" ...>
+<link rel="alternate" hreflang="es" ...>
+<link rel="alternate" hreflang="en" ...>
+<link rel="alternate" hreflang="x-default" ...>
+```
+
+---
+
+## 📂 Estructura principal
+
+```text
+portafolio/
+├── public/
+│   ├── cv/
+│   │   └── CV_Jesus_Zamudio_Noguera.pdf
+│   ├── jzamudio.png
+│   └── favicon.svg
+│
+├── src/
+│   ├── components/
+│   │   ├── Hero.astro
+│   │   ├── Header.astro
+│   │   ├── Experience.astro
+│   │   ├── ProfessionalProjects.astro
+│   │   ├── Projects.astro
+│   │   ├── Skills.astro
+│   │   ├── Education.astro
+│   │   ├── LanguageToggle.astro
+│   │   └── ThemeToggle.astro
+│   │
+│   ├── i18n/
+│   │   └── content.ts
+│   │
+│   ├── layouts/
+│   │   └── Layout.astro
+│   │
+│   └── pages/
+│       ├── index.astro
+│       └── en/
+│           └── index.astro
+│
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   └── deploy.yml
+│   └── dependabot.yml
+│
+├── astro.config.mjs
+├── package.json
+└── README.md
+```
+
+---
+
+## 💻 Ejecutar en local
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/jzamudio1/portafolio.git
+cd portafolio
+```
+
+### 2. Configurar Node.js
+
+El proyecto incluye `.nvmrc`.
+
+Si utilizas NVM:
 
 ```bash
 nvm install
 nvm use
 ```
 
-Instalar dependencias:
+### 3. Instalar dependencias
 
 ```bash
 npm install
 ```
 
-Arrancar el entorno de desarrollo:
+### 4. Iniciar el servidor de desarrollo
 
 ```bash
 npm run dev
 ```
 
-Por defecto, Astro mostrará la URL local en la terminal.
+Astro mostrará en la terminal la URL local.
 
-Normalmente:
+Debido al `base` utilizado por GitHub Pages, normalmente podrás acceder mediante:
 
 ```text
 http://localhost:4321/portafolio/
@@ -269,18 +371,26 @@ http://localhost:4321/portafolio/
 
 ---
 
-## ✅ Validar el proyecto
+## ✅ Validación
 
-Ejecutar las comprobaciones de Astro:
+Comprobar TypeScript y componentes Astro:
 
 ```bash
 npm run check
 ```
 
-Generar el build de producción:
+Generar el proyecto de producción:
 
 ```bash
 npm run build
+```
+
+El comando de build ejecuta:
+
+```text
+astro check
+      ↓
+astro build
 ```
 
 Previsualizar el resultado:
@@ -291,61 +401,83 @@ npm run preview
 
 ---
 
-## 🔄 CI/CD
+## 🚀 CI/CD
 
-El repositorio utiliza **GitHub Actions** para validar y desplegar el proyecto.
+El proyecto utiliza **GitHub Actions** para validar y desplegar automáticamente el portfolio.
 
-El flujo principal es:
+### Pull Request
 
 ```text
-Push / Pull Request
-        ↓
+Pull Request
+     ↓
 Install dependencies
-        ↓
-Astro check
-        ↓
-Astro build
-        ↓
-Merge en main
-        ↓
-GitHub Actions
-        ↓
-GitHub Pages
+     ↓
+Astro Check
+     ↓
+Astro Build
+     ↓
+✅ Validation
 ```
 
-Cada cambio integrado en `main` puede desplegar automáticamente la nueva versión del portfolio.
+### Producción
 
----
-
-## 📦 Actualización de dependencias
-
-El proyecto utiliza **Dependabot** para detectar nuevas versiones de las dependencias npm.
-
-Dependabot revisa periódicamente el proyecto y puede generar Pull Requests con actualizaciones de:
-
-* Astro
-* Tailwind CSS
-* TypeScript
-* Integraciones
-* GitHub Actions
-* Otras dependencias
-
-De esta forma el portfolio puede mantenerse actualizado sin depender exclusivamente de revisiones manuales.
-
----
-
-## 🌍 Deploy
-
-El portfolio se publica mediante **GitHub Pages**.
-
-URL de producción:
-
-👉 https://jzamudio1.github.io/portafolio/
-
-La rama de producción es:
+Cada actualización integrada en:
 
 ```text
 main
+```
+
+dispara automáticamente:
+
+```text
+Push to main
+     ↓
+Install dependencies
+     ↓
+Astro Check
+     ↓
+Astro Build
+     ↓
+Validate generated files
+     ↓
+Upload Pages artifact
+     ↓
+Deploy GitHub Pages
+     ↓
+🌐 Production
+```
+
+Antes del despliegue también se comprueba que existan correctamente los assets principales, el CV y las páginas en español e inglés.
+
+---
+
+## 📦 Dependencias
+
+Las dependencias se mantienen actualizadas mediante **Dependabot**.
+
+Dependabot revisa periódicamente:
+
+- Dependencias npm
+- Astro
+- Tailwind CSS
+- TypeScript
+- Integraciones
+- GitHub Actions
+
+Las actualizaciones se proponen mediante Pull Requests para poder ser validadas por CI antes del merge.
+
+---
+
+## 📄 CV
+
+El currículum puede descargarse directamente desde el portfolio:
+
+👉 **https://jzamudio1.github.io/portafolio/cv/CV_Jesus_Zamudio_Noguera.pdf**
+
+El archivo se encuentra en:
+
+```text
+public/cv/CV_Jesus_Zamudio_Noguera.pdf
 ```
 
 ---
@@ -354,17 +486,26 @@ main
 
 **Jesús Zamudio Noguera**
 
-Software Engineer — Sevilla, España
+Software Engineer  
+📍 Sevilla, España
 
-📧 [jesuszamudionoguera@gmail.com](mailto:jesuszamudionoguera@gmail.com)
-💼 [LinkedIn](https://www.linkedin.com/in/jes%C3%BAszamudio)
-💻 [GitHub](https://github.com/jzamudio1)
+- 📧 jesuszamudionoguera@gmail.com
+- 💼 LinkedIn: https://www.linkedin.com/in/jes%C3%BAszamudio
+- 💻 GitHub: https://github.com/jzamudio1
+- 🌐 Portfolio: https://jzamudio1.github.io/portafolio/
 
 ---
 
 ## 📄 Licencia
 
-Este repositorio contiene mi portafolio profesional y su código fuente.
+Este repositorio contiene el código fuente de mi portfolio profesional.
+
+El contenido relativo a mi experiencia profesional, trayectoria, proyectos y currículum se publica únicamente con fines profesionales y de presentación personal.
+
+---
+
+<p align="center">
+  Developed with Astro, TypeScript & Tailwind CSS 🚀
+</p>
 
 El contenido relacionado con mi experiencia profesional se presenta únicamente con fines informativos y de portfolio.
-
